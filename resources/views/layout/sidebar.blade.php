@@ -28,7 +28,7 @@
         <li class="header">MAIN MENU</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="{{ isActive('dashboard') }}"><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashoard</span></a></li>
-        <li class="treeview {{ isActive('master-barang') }}">
+        <li class="treeview {{ set_active(['master-barang','master-customer','master-kendaraan']) }}">
           <a href="#"><i class="fa fa-database"></i> <span>Master</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -36,8 +36,8 @@
           </a>
           <ul class="treeview-menu">
             <li class="{{ isActive('master-barang') }}"><a href="{{ url('master-barang') }}">Barang</a></li>
-            <li><a href="#">Customer</a></li>
-            <li><a href="#">Kendaraan</a></li>
+            <li class="{{ isActive('master-customer') }}"><a href="{{ url('master-customer') }}">Customer</a></li>
+            <li class="{{ isActive('master-kendaraan') }}"><a href="{{ url('master-kendaraan') }}">Kendaraan</a></li>
             <li><a href="#">Karyawan</a></li>
             <li><a href="#">Sopir</a></li>
             <li><a href="#">Biaya Sopir</a></li>

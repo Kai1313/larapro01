@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 Route::get('dashboard', 'Dashboard@index');
 Route::get('master-barang', 'Master@barang');
+Route::get('master-customer', 'Master@customer');
+Route::get('master-kendaraan', 'Master@kendaraan');

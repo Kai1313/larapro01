@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>Project Surya Jaya</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="{{ asset("/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css") }}">
@@ -15,6 +15,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset("/adminlte/bower_components/font-awesome/css/font-awesome.min.css") }}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{ asset("/adminlte/bower_components/Ionicons/css/ionicons.min.css") }}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ asset("/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css") }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset("/adminlte/dist/css/AdminLTE.min.css")}}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -164,9 +166,12 @@ desired effect
 <script src="{{ asset("/adminlte/bower_components/jquery/dist/jquery.min.js") }}"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset("/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js") }}"></script>
+<!-- DataTables -->
+<script src="{{ asset("/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js") }}"></script>
+<script src="{{ asset("/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset("/adminlte/dist/js/adminlte.min.js") }}"></script>
-
+<?= (isset($scriptsJs)) ? $scriptsJs : null ;?>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->

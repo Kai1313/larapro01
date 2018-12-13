@@ -4,37 +4,61 @@
      <div class="col-md-4 col-xs-12">
        <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">Form Master Barang</h3>
+          <h3 class="box-title">Form Master Kendaraan</h3>
         </div>
         <form role="form">
           <div class="box-body">
             <div class="form-group">
-              <label>Kode Barang</label>
-              <input type="text" name="kode_barang" class="form-control">
+              <label>Nopol</label>
+              <input type="text" name="nopol" class="form-control">
             </div>
             <div class="form-group">
-              <label>Nama Barang</label>
-              <input type="text" name="nama_barang" class="form-control">
+              <label>No Mesin</label>
+              <input type="text" name="no_mesin" class="form-control">
             </div>
             <div class="form-group">
-              <label>Part Number</label>
-              <input type="text" name="part_number" class="form-control">
+              <label>No Rangka</label>
+              <input type="text" name="no_rangka" class="form-control">
             </div>
             <div class="form-group">
-              <label>Nama Satuan</label>
-              <input type="text" name="nama_satuan" class="form-control">
+              <label>Merk/Tipe</label>
+              <input type="text" name="tipe_kendaraan" class="form-control">
             </div>
             <div class="form-group">
-              <label>Minimum Quantity</label>
-              <input type="text" name="min_qty" class="form-control">
+              <label>Jenis/Model</label>
+              <input type="text" name="jenis_kendaraan" class="form-control">
             </div>
             <div class="form-group">
-              <label>Quantity Perset</label>
-              <input type="text" name="qty_perset" class="form-control">
+              <label>Nama Pemilik</label>
+              <input type="text" name="nama_pemilik" class="form-control">
             </div>
             <div class="form-group">
-              <label>Nomor Rak</label>
-              <input type="text" name="no_rak" class="form-control">
+              <label>Tahun Pembuatan</label>
+              <input type="text" name="thn_pembuatan" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>No BPKB</label>
+              <input type="text" name="no_bpkb" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Warna</label>
+              <input type="text" name="warna_kendaraan" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Tgl Masa Berlaku STNK</label>
+              <input type="text" name="masa_stnk" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Isi Silinder/CC</label>
+              <input type="text" name="cc_kendaraan" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Sopir</label>
+              <input type="text" name="sopir_kendaraan" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Kernet</label>
+              <input type="text" name="kernet_kendaraan" class="form-control">
             </div>
           </div>
         </form>
@@ -43,16 +67,16 @@
      <div class="col-md-8 col-xs-12">
       <div class="box">
         <div class="box-body">
-          <table id="m_barang" class="table table-bordered table-striped" cellpadding="0" cellspacing="0" width="100%">
+          <table id="m_kendaraan" class="table table-bordered table-striped" cellpadding="0" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th class="text-center">No</th>
-                <th class="text-center">Kode</th>
-                <th class="text-center">Nama</th>
-                <th class="text-center">Part Num</th>
-                <th class="text-center">Min Qty</th>
-                <th class="text-center">Qty Perset</th>
-                <th class="text-center">No Rak</th>
+                <th class="text-center">Nopol</th>
+                <th class="text-center">Merk</th>
+                <th class="text-center">Jenis</th>
+                <th class="text-center">Warna</th>
+                <th class="text-center">Sopir</th>
+                <th class="text-center">Kernet</th>
                 <th class="text-center">Action</th>
               </tr>
             </thead>
