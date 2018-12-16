@@ -14,6 +14,12 @@ class Master extends Controller
         return view('m_barang')->with($data);
     }
 
+    public function showBarang()
+    {
+        $data = Master_barang::all();
+        return response()->json($data);
+    }
+
     public function addBarang(Request $request)
     {
         $m_barang = new Master_barang;
