@@ -4,40 +4,57 @@
      <div class="col-md-4 col-xs-12">
        <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">Form Master Barang</h3>
+          <h3 class="box-title">Form Master Karyawan</h3>
         </div>
-        <form role="form" id="form-barang">
+        <form role="form">
           <div class="box-body">
             <div class="form-group">
-              <label>Kode Barang</label>
-              <input type="text" name="kode_barang" class="form-control">
+              <label>Kode</label>
+              <input type="text" name="kode_karyawan" class="form-control">
             </div>
             <div class="form-group">
-              <label>Nama Barang</label>
-              <input type="text" name="nama_barang" class="form-control">
+              <label>Nama</label>
+              <input type="text" name="nama_karyawan" class="form-control">
             </div>
             <div class="form-group">
-              <label>Part Number</label>
-              <input type="text" name="part_number" class="form-control">
+              <label>Alamat</label>
+              <textarea name="alamat_karyawan" class="form-control"></textarea>
             </div>
             <div class="form-group">
-              <label>Nama Satuan</label>
-              <input type="text" name="nama_satuan" class="form-control">
+              <label>Kota</label>
+              <input type="text" name="kota_karyawan" class="form-control">
             </div>
             <div class="form-group">
-              <label>Minimum Quantity</label>
-              <input type="text" name="min_qty" class="form-control">
+              <label>Telepon</label>
+              <input type="text" name="tlp_karyawan" class="form-control">
             </div>
             <div class="form-group">
-              <label>Quantity Perset</label>
-              <input type="text" name="qty_perset" class="form-control">
+              <label>Upah Harian</label>
+              <input type="text" name="upah_harian" class="form-control">
             </div>
             <div class="form-group">
-              <label>Nomor Rak</label>
-              <input type="text" name="no_rak" class="form-control">
+              <label>Upah Hari Besar</label>
+              <input type="text" name="upah_hari_besar" class="form-control">
             </div>
             <div class="form-group">
-              <button type="button" class="btn btn-sm btn-primary" onclick="add()">Simpan</button>
+              <label>Upah Hari Minggu</label>
+              <input type="text" name="upah_hari_minggu" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Minimum Jam Lembur</label>
+              <input type="text" name="min_jam_lembur" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Upah Lembur per Jam</label>
+              <input type="text" name="upah_lembur" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Gaji Bulanan</label>
+              <input type="text" name="gaji_bulanan" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>6x Kerja Penuh</label>
+              <input type="text" name="kerja_penuh_6x" class="form-control">
             </div>
           </div>
         </form>
@@ -46,16 +63,16 @@
      <div class="col-md-8 col-xs-12">
       <div class="box">
         <div class="box-body">
-          <table id="m_barang" class="table table-bordered table-striped" cellpadding="0" cellspacing="0" width="100%">
+          <table id="m_karyawan" class="table table-bordered table-striped" cellpadding="0" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th class="text-center">No</th>
                 <th class="text-center">Kode</th>
                 <th class="text-center">Nama</th>
-                <th class="text-center">Part Num</th>
-                <th class="text-center">Min Qty</th>
-                <th class="text-center">Qty Perset</th>
-                <th class="text-center">No Rak</th>
+                <th class="text-center">Alamat</th>
+                <th class="text-center">Kota</th>
+                <th class="text-center">Telepon</th>
+                <th class="text-center">Gaji/Upah</th>
                 <th class="text-center">Action</th>
               </tr>
             </thead>
@@ -209,36 +226,4 @@
       </div>        
      </div>
    </div>
-@endsection
-@section('js')
-  <script>
-    $(function ()
-    {
-      $("#m_barang").DataTable({});
-    })
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-    function add()
-    {
-      $.ajax({
-        type: 'POST',
-        url: '/addBarang',
-        data: $('#form-barang').serialize(),
-        success: function(data)
-        {
-          if(data.status)
-          {
-            alert('Sukses Menambah Barang');
-          }
-          else
-          {
-            alert('Gagal Menambah Barang');
-          }
-        }
-      });
-    }
-  </script>
 @endsection

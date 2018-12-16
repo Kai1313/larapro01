@@ -7,6 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Project Surya Jaya</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -171,7 +172,7 @@ desired effect
 <script src="{{ asset("/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset("/adminlte/dist/js/adminlte.min.js") }}"></script>
-<?= (isset($scriptsJs)) ? $scriptsJs : null ;?>
+@yield('js')
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->

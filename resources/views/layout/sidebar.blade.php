@@ -28,7 +28,7 @@
         <li class="header">MAIN MENU</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="{{ isActive('dashboard') }}"><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashoard</span></a></li>
-        <li class="treeview {{ set_active(['master-barang','master-customer','master-kendaraan']) }}">
+        <li class="treeview {{ set_active(['master-barang','master-customer','master-kendaraan','master-karyawan','master-driver','master-biaya-driver','master-tujuan']) }}">
           <a href="#"><i class="fa fa-database"></i> <span>Master</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -38,11 +38,11 @@
             <li class="{{ isActive('master-barang') }}"><a href="{{ url('master-barang') }}">Barang</a></li>
             <li class="{{ isActive('master-customer') }}"><a href="{{ url('master-customer') }}">Customer</a></li>
             <li class="{{ isActive('master-kendaraan') }}"><a href="{{ url('master-kendaraan') }}">Kendaraan</a></li>
-            <li><a href="#">Karyawan</a></li>
-            <li><a href="#">Sopir</a></li>
-            <li><a href="#">Biaya Sopir</a></li>
-            <li><a href="#">Tujuan</a></li>
-            <li><a href="#">Supplier</a></li>
+            <li class="{{ isActive('master-karyawan') }}"><a href="{{ url('master-karyawan') }}">Karyawan</a></li>
+            <li class="{{ isActive('master-driver') }}"><a href="{{ url('master-driver') }}">Sopir</a></li>
+            <li class="{{ isActive('master-biaya-driver') }}"><a href="{{ url('master-biaya-driver') }}">Biaya Sopir</a></li>
+            <li class="{{ isActive('master-tujuan') }}"><a href="{{ url('master-tujuan') }}">Tujuan</a></li>
+            <li class="{{ isActive('master-supplier') }}"><a href="{{ url('master-supplier') }}">Supplier</a></li>
           </ul>
         </li>
         <li class="treeview">
